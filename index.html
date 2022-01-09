@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="scripts.js"></script>
@@ -7,9 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
 </head>
+
 <body>
+    <button id="btn">Click Me</button>
     <script>
-        game(7);
+        const btn = document.querySelector('#btn');
+        btn.onclick = () => game(5);
     </script>
 </body>
+
+
 </html>
