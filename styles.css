@@ -1,0 +1,37 @@
+.scoreBoard {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.playerScore {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.computerScore {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.buttonPanel {
+    display: flex;
+    width: 100%;
+}
+
+.score {
+    display: flex;
+    padding-left: 10%;
+}
+
+.compScore {
+    display: flex;
+    padding-left: 10%;
+}
+
+.buttonPanel {
+    display: flex;
+    justify-content: space-around;
+}

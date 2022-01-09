@@ -9,8 +9,7 @@ function computerPlay() {
     }
 }
 
-function playRound(computerSelection) {
-    playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
+function playRound(computerSelection, playerSelection) {
     switch (playerSelection) {
         case 'rock': switch (computerSelection) {
             case 'rock': return 'tie'

@@ -6,14 +6,82 @@
     <script type="text/javascript" src="scripts.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-    <button id="btn">Click Me</button>
+    <div class="scoreBoard">
+        <div class="playerScore">
+            Player:
+            <div class="score"></div>
+        </div>
+        <div class="computerScore">
+            Computer:
+            <div class="compScore"></div>
+        </div>
+    </div>
+    <div class="buttonPanel">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+
     <script>
-        const btn = document.querySelector('#btn');
-        btn.addEventListener('click', () => game(5));
+        const playerScore = document.querySelector('.score');
+        const compScore = document.querySelector('.compScore');
+        var p = 0;
+        var c = 0;
+        const rock = document.querySelector('#rock');
+        const paper = document.querySelector('#paper');
+        const scissors = document.querySelector('#scissors');
+        rock.addEventListener('click', () => {
+            const outcome = playRound(computerPlay(), "rock");
+
+            if (outcome == "win") {
+                p++;
+            }
+            else if (outcome == "lose") {
+                c++;
+            }
+            else {
+                alert('It\'s a Tie!');
+            }
+            playerScore.textContent = p;
+            compScore.textContent = c;
+        });
+        paper.addEventListener('click', () => {
+            const outcome = playRound(computerPlay(), "paper");
+
+            if (outcome == "win") {
+                p++;
+            }
+            else if (outcome == "lose") {
+                c++;
+            }
+            else {
+                alert('It\'s a Tie!');
+            }
+            playerScore.textContent = p;
+            compScore.textContent = c;
+        });
+        scissors.addEventListener('click', () => {
+            const outcome = playRound(computerPlay(), "scissors");
+
+            if (outcome == "win") {
+                p++;
+            }
+            else if (outcome == "lose") {
+                c++;
+            }
+            else {
+                alert('It\'s a Tie!');
+            }
+            playerScore.textContent = p;
+            compScore.textContent = c;
+        });
+        playerScore.textContent = p;
+        compScore.textContent = c;
     </script>
 </body>
 
